@@ -1,0 +1,19 @@
+html, body {
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.bright-red {
+    background-color: hsl(12, 88%, 59%);
+}
+
+.dark-blue {
+    color: hsl(228, 39%, 23%);
+}
+
+.dark-grayish {
+    color: hsl(227, 12%, 61%);
+}
+
+.tablet-1 {
+    z-index: -1;
+}
