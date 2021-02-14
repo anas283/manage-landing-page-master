@@ -1,7 +1,7 @@
 html, body {
     font-family: 'Be Vietnam', sans-serif;
-    /* overflow-x: hidden; */
-    /* position: relative; */
+    overflow-x: hidden;
+    position: relative;
 }
 
 .bright-red {
@@ -44,4 +44,12 @@ html, body {
     position: absolute;
     margin-top: -280px;
     margin-left: 250px;
+}
+
+.tablet-3 {
+    opacity: 10%;
+    z-index: 1;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: -275px;
 }
