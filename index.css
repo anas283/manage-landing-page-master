@@ -1,13 +1,31 @@
 html, body {
     font-family: 'Be Vietnam', sans-serif;
+    /* overflow-x: hidden; */
+    /* position: relative; */
 }
 
 .bright-red {
     background-color: hsl(12, 88%, 59%);
 }
 
+.text-red {
+    color: hsl(12, 88%, 59%);
+}
+
+.pale-red {
+    background-color: hsl(13, 100%, 96%);
+}
+
 .dark-blue {
     color: hsl(228, 39%, 23%);
+}
+
+.very-dark-blue {
+    background-color: hsl(233, 12%, 13%);
+}
+
+.very-light-gray {
+    color: hsl(0, 0%, 98%);
 }
 
 .dark-grayish {
@@ -16,4 +34,14 @@ html, body {
 
 .tablet-1 {
     z-index: -1;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 80px;
+}
+
+.tablet-2 {
+    z-index: -1;
+    position: absolute;
+    margin-top: -280px;
+    margin-left: 250px;
 }
