@@ -48,10 +48,9 @@ html, body {
 
 .tablet-3 {
     opacity: 10%;
-    z-index: 1;
     position: absolute;
-    margin-top: 120px;
-    margin-left: -275px;
+    margin-top: -50px;
+    margin-left: -310px;
 }
 
 .w-full {
@@ -99,5 +98,13 @@ button:focus {
         position: absolute;
         margin-top: -240px;
         margin-left: 710px;
+    }
+
+    .tablet-2 {
+        width: 700px;
+        z-index: -1;
+        position: absolute;
+        margin-top: 350px;
+        margin-left: -500px;
     }
 }
