@@ -68,21 +68,17 @@ button:focus {
 /* start menu */
 
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
     height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-.menu-content {
+    width: 100%;
     display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgb(77,77,77);
+    background: linear-gradient(0deg, rgba(77,77,77,0.4066001400560224) 0%, rgba(236,236,236,0.0760679271708683) 100%);
+    /* background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.336); */
 }
 
 .show {

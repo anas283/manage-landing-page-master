@@ -14,8 +14,6 @@
 </head>
 <body>
 
-	<div class="overlay"></div>
-
 	<div class="max-w-6xl mx-auto">
 		<img class="tablet-1" src="./images/bg-tablet-pattern.svg" alt="tablet">
 		
@@ -31,21 +29,26 @@
 					<a class="my-2 mx-4" href="#community">Community</a>
 				</div>
 
-				<button class="visible md:invisible border" onclick="toggleMenu()">
-					<img id="menu-img" src="./images/icon-hamburger.svg" alt="menu">
+				<button class="visible md:invisible z-50" onclick="openNav()">
+					<img id="menu-open" src="./images/icon-hamburger.svg" alt="menu">
+				</button>
+				<button class="visible md:invisible z-50" onclick="closeNav()">
+					<img id="menu-close" src="./images/icon-close.svg" alt="menu">
 				</button>
 
 				<div class="invisible w-0 md:w-auto md:visible flex justify-end">
-					<button class="mt-8 font-medium bright-red text-white px-8 py-3 text-sm rounded-full shadow-red">Get Started</button>
+					<button class="mt-0 font-medium bright-red text-white px-8 py-3 text-sm rounded-full shadow-red">Get Started</button>
 				</div>
 			</div>
 
-			<div id="menu" class="menu-content bg-white p-10 mt-10 rounded shadow-sm flex flex-col dark-blue text-center font-bold">
-				<a class="my-2" href="#pricing">Pricing</a>
-				<a class="my-2" href="#product">Product</a>
-				<a class="my-2" href="#aboutus">About Us</a>
-				<a class="my-2" href="#careers">Careers</a>
-				<a class="my-2" href="#community">Community</a>
+			<div id="myNav" class="overlay">
+				<div class="menu-content bg-white p-10 mt-24 mx-6 rounded shadow-sm flex flex-col dark-blue text-center font-bold">
+					<a class="my-2" href="#pricing">Pricing</a>
+					<a class="my-2" href="#product">Product</a>
+					<a class="my-2" href="#aboutus">About Us</a>
+					<a class="my-2" href="#careers">Careers</a>
+					<a class="my-2" href="#community">Community</a>
+				</div>
 			</div>
 	
 			<div class="md:flex md:flex-row-reverse md:py-20">
@@ -247,10 +250,22 @@
 	</footer>
 
 	<script>
-		// toggle menu to show and hide
-		function toggleMenu() {
-			document.getElementById('menu').classList.toggle('show');
+		document.getElementById('menu-close').style.display = "none";
 
+		function openNav() {
+			document.getElementById('menu-open').style.display = "none";
+			document.getElementById('menu-close').style.display = "block";
+			document.getElementById("myNav").style.display = "block";
+		}
+
+		function closeNav() {
+			document.getElementById('menu-open').style.display = "block";
+			document.getElementById('menu-close').style.display = "none";
+			document.getElementById("myNav").style.display = "none";
+		}
+
+		// change menu icon
+		function changeIcon() {
 			var img = document.getElementById('menu-img').src;
 			if (img.indexOf('icon-hamburger.svg') != -1) {
 				document.getElementById('menu-img').src = './images/icon-close.svg';
