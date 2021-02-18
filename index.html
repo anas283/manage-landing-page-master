@@ -42,7 +42,7 @@
 			</div>
 
 			<div id="myNav" class="overlay">
-				<div class="menu-content bg-white p-10 mt-24 mx-6 rounded shadow-sm flex flex-col dark-blue text-center font-bold">
+				<div id="menu" class="menu-content bg-white p-10 mt-24 mx-6 rounded shadow-sm flex flex-col dark-blue text-center font-bold">
 					<a class="my-2 hover:opacity-60 duration-100" href="#pricing">Pricing</a>
 					<a class="my-2 hover:opacity-60 duration-100" href="#product">Product</a>
 					<a class="my-2 hover:opacity-60 duration-100" href="#aboutus">About Us</a>
@@ -320,11 +320,16 @@
 	<script>
 		document.getElementById('menu-close').style.display = "none";
 
+		var isMenuOpen = false;
 		function openNav() {
 			document.getElementById('menu-open').style.display = "none";
 			document.getElementById('menu-close').style.display = "block";
 			document.getElementById("myNav").style.display = "block";
 			document.body.style.overflowY = "hidden";
+
+			setTimeout(function() {
+				isMenuOpen = true;
+			},100)
 		}
 
 		function closeNav() {
@@ -334,10 +339,31 @@
 		}
 
 		// Close the dropdown menu if the user clicks outside of it
-		window.onclick = function(event) {
-			if (!event.target.matches('.menu-content')) {
-				// closeNav();
+		// window.onclick = function(event) {
+		// 	var menu = document.getElementById('menu');
+		// 	if (!event.target !== menu) {
+		// 		closeNav();
+		// 		// menu.style.display = "none";
+		// 	}
+		// }
+
+		window.addEventListener('click', function(e){   
+			if (document.getElementById('menu').contains(e.target)) {
+				// Clicked in box
+			} else {
+				if(isMenuOpen) {
+					closeNav();
+					
+					setTimeout(function() {
+						isMenuOpen = false;
+					},100)
+				}
 			}
+		});
+
+		// close menu onscroll
+		window.onscroll = function(e) {
+			closeNav();
 		}
 
 		// change menu icon
