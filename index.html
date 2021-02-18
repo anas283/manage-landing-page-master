@@ -339,14 +339,6 @@
 		}
 
 		// Close the dropdown menu if the user clicks outside of it
-		// window.onclick = function(event) {
-		// 	var menu = document.getElementById('menu');
-		// 	if (!event.target !== menu) {
-		// 		closeNav();
-		// 		// menu.style.display = "none";
-		// 	}
-		// }
-
 		window.addEventListener('click', function(e){   
 			if (document.getElementById('menu').contains(e.target)) {
 				// Clicked in box
