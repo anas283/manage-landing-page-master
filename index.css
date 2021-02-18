@@ -201,4 +201,13 @@ button:focus {
         margin-top: 350px;
         margin-left: -500px;
     }
+
+    .tablet-3 {
+        /* display: none; */
+        width: 500px;
+        opacity: 10%;
+        position: absolute;
+        margin-top: -100px;
+        margin-left: 130px;
+    }
 }
