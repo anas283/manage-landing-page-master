@@ -185,6 +185,33 @@ button:focus {
 
 /* start slideshow */
 
+/* testimonial slider */
+
+.scrolling-wrapper-flexbox {
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar {
+    height: 8px;       
+    width: 5px;
+    background-color: #ffff;
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar-thumb:horizontal{
+    background: hsla(12, 88%, 59%, 0.13);
+    border-radius: 15px;
+}
+
+.card {
+    flex: 0 0 auto;
+}
+
+/* testimonial slider */
+
 @media only screen and (min-width: 768px) {
     .tablet-1 {
         width: 700px;
